@@ -23,11 +23,12 @@ export default function Favorites({ navigation }) {
         keyExtractor={item => item._id}
         renderItem={({ item }) => (
           <View style={styles.card}>
-            <Text style={styles.title}>{item.nombre}</Text>
-            <Text>Año: {item.año}</Text>
+            <Text style={styles.title}>{item.movie}</Text>
+            <Text>Año: {item.year}</Text>
             <Text>Director: {item.director}</Text>
-            <Text>Actores: {item.actores}</Text>
-            {item.imagen && <Image source={{ uri: item.imagen }} style={styles.image} />}
+            <Text>Personaje: {item.character}</Text>
+            <Text>Frase: {item.full_line}</Text>
+            {item.poster && <Image source={{ uri: item.poster }} style={styles.image} />}
           </View>
         )}
         ListEmptyComponent={<Text>No hay favoritos guardados.</Text>}
